@@ -9,7 +9,7 @@
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
-      <%= form_with url: "", local: true, class: "ui form" do |f| %>
+      <%= form_with url: login_path, local: true, scope:"session", class: "ui form" do |f| %>
       <div class="ui form">
         <div class="field">
           <label>Username</label>
@@ -27,16 +27,16 @@
         </div>
         <%= f.submit "Login", class: "ui orange submit button"%>
       </div>
-      <% end %>
-    </div>
-    <div class="middle aligned column">
-      <div class="ui big orange disabled button">
-        <i class="signup icon"></i>
-        Sign Up
-      </div>
+    <% end %>
+  </div>
+  <div class="middle aligned column">
+    <div class="ui big orange disabled button">
+      <i class="signup icon"></i>
+      Sign Up
     </div>
   </div>
-  <div class="ui vertical divider">
-    Or
-  </div>
+</div>
+<div class="ui vertical divider">
+  Or
+</div>
 </div>
