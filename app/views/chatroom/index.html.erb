@@ -15,35 +15,35 @@
       </div>
 
       <div class="extra content">
-        <form class="ui reply form">
-          <div class="field">
-            <div class="ui fluid icon input">
-              <input type="text" placeholder="Search users...">
-              <i class="bordered inverted orange edit icon"></i>
-            </div>
+        <%= form_with url: message_path, local: true, scope: "message", class: "ui reply form" do |f| %>
+        <div class="field">
+          <div class="ui fluid icon input">
+            <%= f.text_field :body%>
+            <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe%>
           </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="four wide column">
-    <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui inverted vertical menu">
-          <a class="active item">
-            Home
-          </a>
-          <a class="item">
-            Messages
-          </a>
-          <a class="item">
-            Friends
-          </a>
         </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+<div class="four wide column">
+  <div class="ui fluid raised card chatbox">
+    <div class="content">
+      <div class="ui inverted vertical menu">
+        <a class="active item">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Friends
+        </a>
       </div>
     </div>
   </div>
+</div>
 
 </div>
